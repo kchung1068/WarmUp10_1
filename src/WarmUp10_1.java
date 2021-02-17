@@ -9,16 +9,30 @@ public class WarmUp10_1 {
 
 	public static void main(String[] args) {
 		int[] array = {1,5,7,3};
-		String list = "";
-
+		String list = "[";
+		String list2 = "[";
 		for (int x = 0; x < array.length; x += 1) {
-			list += array[x];
-			list += ", ";
+
+			if (x != array.length -1) {
+				list += array[x] + ", ";
+			} else {
+				list += array[x];
+			}
 		}
+		list += "]";
 		System.out.println(list);
 		for (int x = 0; x < array.length; x += 1) {
 			array[x] += 1;
 		}
-		System.out.println(array);
+		for (int x = 0; x < array.length; x += 1) {
+
+			if (x != array.length -1) {
+				list2 += array[x] + ", ";
+			} else {
+				list2 += array[x];
+			}
+		}
+		list2 += "]";
+		System.out.println(list2);
 	}
 }
